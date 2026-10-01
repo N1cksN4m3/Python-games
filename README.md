@@ -14,7 +14,7 @@ A fully functional CLI Blackjack game featuring:
 ### 2. Wordle Clone (`/wordle`)
 A Python implementation of the popular word-guessing game. *(Currently procedural, scheduled for OOP refactoring).*
 
-## 🚀 Roadmap & Architecture
+## Roadmap & Architecture
 Currently, the games operate independently using a procedural approach. The next architectural phase involves refactoring the codebase into an Object-Oriented structure, extracting shared entities (e.g., `Card`, `Deck`, `GameEngine`) to support additional games like Texas Hold'em with high code reusability.
 
 ---
