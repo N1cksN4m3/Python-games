@@ -20,6 +20,7 @@ jobs:
           python-version: '3.12'
 
       - name: Run the Unit Tests
+        working-directory: blackjack
         run: |
           python -m unittest -v black_jack_unit_test.py
           
