@@ -2,7 +2,7 @@ import unittest
 import os
 import tempfile
 
-from blackjack_v2_0 import betting_system, check_bj
+from blackjack_v2_0 import check_bj
 from blackjack_v2_0 import Deck, Wallet, Hand, User
 
 class DeckTest(unittest.TestCase):
@@ -179,7 +179,7 @@ class UserTest(unittest.TestCase):
 
     def test_new_file(self):
         """Testing wether save_user() will create a new file with header or not"""
-        file_name = "Leaderboard_bj.txt"
+        file_name = "leaderboard_bj.txt"
 
         self.assertFalse(os.path.exists(file_name))
 
@@ -224,7 +224,7 @@ class UserTest(unittest.TestCase):
         user3.hands = 3
         user3.save_user()
 
-        file_name = "Leaderboard_bj.txt"
+        file_name = "leaderboard_bj.txt"
 
         with open(file_name, "r") as f:
             lines = f.readlines()
@@ -240,7 +240,7 @@ class UserTest(unittest.TestCase):
         """Testing wether loaduser() can handle zero byte files gracefully"""
 
 
-        file_name = "Leaderboard_bj.txt"
+        file_name = "leaderboard_bj.txt"
 
         with open(file_name, "w"):
             pass
