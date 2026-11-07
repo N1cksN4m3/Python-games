@@ -17,10 +17,16 @@ def save(curr_name, curr_money, hands):
 def leaderboard():
     try:
         with open("leaderboard_bj.txt", "r") as f:
+            try:
+                next(f)
+            except StopIteration:
+                pass
             lines = f.readlines()
     except FileNotFoundError:
         print("No leaderboard has been found.")
         return
+
+
 
     records = []
     for r in lines:
@@ -31,7 +37,7 @@ def leaderboard():
 
     print("\n=== LEADERBOARD ===")
     for i, (nickname, curr_money, hands) in enumerate(records, 1):
-        print(f"{i}. {nickname} - Saldo {curr_money}€ | Mani {hands}")
+        print(f"{i}. {nickname} - Money {curr_money}€ | Hands {hands}")
 
 
 

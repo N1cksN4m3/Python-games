@@ -1,0 +1,6 @@
+Nickname -- money -- hands
+test,29.0,21
+leo,200.0,3
+sofia,0.0,7
+a,200.0,1
+dvd,200.0,5
