@@ -1,0 +1,25 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download code from repository
+        uses: actions/checkout@v4
+
+      - name: Python config
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run the Unit Tests
+        run: |
+          python -m unittest -v black_jack_unit_test.py
+          
